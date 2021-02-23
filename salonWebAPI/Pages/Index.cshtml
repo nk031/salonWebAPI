@@ -36,47 +36,49 @@
                         <th width="200px">Service</th>
                         <th width="200px">Arrived Date</th>
                     </tr>
-                    <br></br>
+                    
                 </thead>
 
             </table>
             <!-- </table> -->
 
         </div>
-        </div>
+    </div>
+    <style>
 
-        <!-- below mentioned code will create the template for add client detail -->
+        .group label {
+            font-size: 20px;
+        }
+    </style>
+
+    <!-- below mentioned code will create the template for add client detail -->
+
+    <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        Customer Information
-                    </div>
-                    <div class="panel-body">
-                    </div>
-                    <div class="panel-footer">
-                    </div>
+            <div style="text-align:center; width:100%; padding:0;">
+                <div class="col-sm-6">
+                    <h3> Customer Information</h3>
                 </div>
             </div>
         </div>
-
-        <div class="form-group">
-            <label for="Clients_Name">Clients Name</label>
-            <input type="text" id="clients_Name" class="form-control"  />
+    </div>
+        <div class="group">
+            <label for="Clients_Name" size="100">Clients Name</label>
+            <input type="text" id="clients_Name" class="form-control" style="width: 500px;"  />
         </div>
-        <div class="form-group">
+        <div class="group">
             <label for="contact">Contact</label>
-            <input type="text" id="contact" class="form-control" />
+            <input type="text" id="contact" class="form-control" style="width: 500px;"  />
         </div>
-        <div class="form-group">
-            <label for="service">service</label>
-            <input type="text" id="service" class="form-control" />
+        <div class="group">
+            <label for="service">Service</label>
+            <input type="text" id="service" class="form-control" style="width: 500px;"  />
         </div>
-        <div class="form-group">
+        <div class="group">
             <label for="arrived_Date">Arrived Date</label>
-            <input type="date" id="arrived_Date" class="form-control" />
+            <input type="date" id="arrived_Date" class="form-control" style="width: 500px;"  />
         </div>
-        <div class="form-group" id="result">
+        <div class="group" id="result">
         </div>
         <button type="button" class="btn btn-primary" onclick="addClient()">Add Client</button>
 
@@ -246,9 +248,9 @@
                                                         <td width="100px">  ${contact} </td>
                                                         <td width="100px">  ${service} </td>
                                                         <td width="100px">  ${arrived_Date} </td>
-                                                        
+
                                                     </tr>
-                                                    
+
                                                 </table>
                                             </thead>
                                             <div style="text-align:right; width:100%; padding:0;">
