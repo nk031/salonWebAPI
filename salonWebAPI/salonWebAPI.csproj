@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Data\DataScript\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
