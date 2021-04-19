@@ -5,18 +5,20 @@
 
 <!DOCTYPE html>
 <html xmlns="">
-
+<!---html code for page layout-->
 <head>
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!---style sheet link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
+<!---background of home page-->
 <body style="background-color:lightpink">
 </body>
 
 <body>
-
+    <!---table layout-->
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -27,16 +29,18 @@
     <div class="container">
         <!--<div class="col-sm-6">-->
         <!-- <table id="ClientsTable" class="table table-bordered table-condensed table-striped" >-->
+        <!---table style-->
         <div class="row" id="ClientsTable">
             <table style="width:100%">
                 <thead>
                     <tr>
+                        <!---table heading data-->
                         <th width="200px">Clients Name </th>
                         <th width="200px">Contact</th>
                         <th width="200px">Service</th>
                         <th width="200px">Arrived Date</th>
                     </tr>
-                    
+
                 </thead>
 
             </table>
@@ -62,204 +66,209 @@
             </div>
         </div>
     </div>
-        <div class="group">
-            <label for="Clients_Name" size="100">Clients Name</label>
-            <input type="text" id="clients_Name" class="form-control" style="width: 500px;"  />
-        </div>
-        <div class="group">
-            <label for="contact">Contact</label>
-            <input type="text" id="contact" class="form-control" style="width: 500px;"  />
-        </div>
-        <div class="group">
-            <label for="service">Service</label>
-            <input type="text" id="service" class="form-control" style="width: 500px;"  />
-        </div>
-        <div class="group">
-            <label for="arrived_Date">Arrived Date</label>
-            <input type="date" id="arrived_Date" class="form-control" style="width: 500px;"  />
-        </div>
-        <div class="group" id="result">
-        </div>
-        <button type="button" class="btn btn-primary" onclick="addClient()">Add Client</button>
+    <!---table format-->
+    <div class="group">
+        <label for="Clients_Name" size="100">Clients Name</label>
+        <input type="text" id="clients_Name" class="form-control" style="width: 500px;" />
+    </div>
+    <div class="group">
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" class="form-control" style="width: 500px;" />
+    </div>
+    <div class="group">
+        <label for="service">Service</label>
+        <input type="text" id="service" class="form-control" style="width: 500px;" />
+    </div>
+    <div class="group">
+        <label for="arrived_Date">Arrived Date</label>
+        <input type="date" id="arrived_Date" class="form-control" style="width: 500px;" />
+    </div>
+    <div class="group" id="result">
+    </div>
+    <!--- code for add new client-->
+    <button type="button" class="btn btn-primary" onclick="addClient()">Add Client</button>
 
-        <!-- below mentioned code will create the template for update client detail -->
-        <div class="modal" tabindex="-1" role="dialog" id="UpdateClients">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Update Client Data</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <input type="hidden" class="form-control" id="Update_id" aria-describedby="IdHelp">
-                            </div>
-                            <div class="form-group">
-                                <label for="Client_Name">Clients Name</label>
-                                <input type="text" id="Update_client_Name" class="form-control" aria-describedby="clients_NameHelp" />
-                            </div>
-                            <div class="form-group">
-                                <label for="contact">Contact</label>
-                                <input type="text" id="Update_contact" class="form-control" aria-describedby="contactHelp" />
-                            </div>
-                            <div class="form-group">
-                                <label for="service">service</label>
-                                <input type="text" id="Update_service" class="form-control" aria-describedby="serviceHelp" />
-                            </div>
-                            <div class="form-group">
-                                <label for="arrived_Date">Arrived Date</label>
-                                <input type="date" id="Update_arrived_Date" class="form-control" aria-describedby="arrived_DateHelp" />
-                            </div>
-                            <div class="form-group" id="Update_result">
-                            </div>
-                            <button type="button" class="btn btn-primary" onclick="UpdateClient()">Update</button>
+    <!-- below mentioned code will create the template for update client detail -->
+    <div class="modal" tabindex="-1" role="dialog" id="UpdateClients">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Client Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="Update_id" aria-describedby="IdHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="Client_Name">Clients Name</label>
+                            <input type="text" id="Update_client_Name" class="form-control" aria-describedby="clients_NameHelp" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <input type="text" id="Update_contact" class="form-control" aria-describedby="contactHelp" />
+                        </div>
+                        <div class="form-group">
+                            <label for="service">service</label>
+                            <input type="text" id="Update_service" class="form-control" aria-describedby="serviceHelp" />
+                        </div>
+                        <div class="form-group">
+                            <label for="arrived_Date">Arrived Date</label>
+                            <input type="date" id="Update_arrived_Date" class="form-control" aria-describedby="arrived_DateHelp" />
+                        </div>
+                        <div class="form-group" id="Update_result">
+                        </div>
+                        <!---button code for update client-->
+                        <button type="button" class="btn btn-primary" onclick="UpdateClient()">Update</button>
+
+                        <!--- script link-->
+                        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+                        <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+                        <script>
+                            //file path
+                            var uri = 'api/ClientAPI'; 
+                            //Java script main function so JS start from here
+                            $(document).ready(function () {
+                                $.getJSON(uri)
+                                    .done(function (data) {
+                                        $("#ClientTemplate").tmpl(data).appendTo("#ClientsTable");
+                                    });
+                            });
 
 
-                            <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-                            <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                            // function to get all Clients data and show on web page
+                            function getallClient() {
+                                $.getJSON(uri)
+                                    .done(function (data) {
+                                        $("#ClientsTable").text("");
+                                        $("#ClientTemplate").tmpl(data).appendTo("#ClientsTable");
+                                    });
+                            }
 
-                            <script>
-                                var uri = 'api/ClientAPI';
-                                //Java script main function so JS start from here
-                                $(document).ready(function () {
-                                    $.getJSON(uri)
-                                        .done(function (data) {
-                                            $("#ClientTemplate").tmpl(data).appendTo("#ClientsTable");
-                                        });
+                            // function to add data for new Client
+                            function addClient() {
+                                var _client_Name = $('#clients_Name').val();
+                                var _contact = $('#contact').val();
+                                var _service = $('#service').val();
+                                var _arrived_Date = $('#arrived_Date').val();
+
+                                var Client = {
+                                    client_Name: _client_Name,
+                                    contact: _contact,
+                                    service: _service,
+                                    arrived_Date: _arrived_Date,
+
+                                };
+                                $.ajax({
+                                    type: "POST",
+                                    url: uri,
+                                    data: JSON.stringify(Client),
+                                    contentType: "application/json; charset=utf-8"
+                                }).done(function (response) {
+                                    $("#result").html("New Client data is added successfully");
+
+                                    getallClient();
+                                }).fail(function (jqXHR, textStatus) {
+                                    $("#result").html("An error occured when Adding the Client record.");
                                 });
+                            }
 
 
-                                // function to get all Clients data and show on web page
-                                function getallClient() {
-                                    $.getJSON(uri)
-                                        .done(function (data) {
-                                            $("#ClientsTable").text("");
-                                            $("#ClientTemplate").tmpl(data).appendTo("#ClientsTable");
-                                        });
-                                }
 
-                                // function to add data for new Client
-                                function addClient() {
-                                    var _client_Name = $('#clients_Name').val();
-                                    var _contact = $('#contact').val();
-                                    var _service = $('#service').val();
-                                    var _arrived_Date = $('#arrived_Date').val();
 
-                                    var Client = {
-                                        client_Name: _client_Name,
-                                        contact: _contact,
-                                        service: _service,
-                                        arrived_Date: _arrived_Date,
-
-                                    };
+                            //funtion to delete a particular Client based on id
+                            function remove(id) {
+                                var yes = confirm("Are you sure you want to delete this Client?");
+                                if (yes) {
                                     $.ajax({
-                                        type: "POST",
-                                        url: uri,
-                                        data: JSON.stringify(Client),
-                                        contentType: "application/json; charset=utf-8"
-                                    }).done(function (response) {
-                                        $("#result").html("New Client data is added successfully");
-
-                                        getallClient();
-                                    }).fail(function (jqXHR, textStatus) {
-                                        $("#result").html("An error occured when Adding the Client record.");
-                                    });
-                                }
-
-
-
-
-                                //funtion to delete a particular Client based on id
-                                function remove(id) {
-                                    var yes = confirm("Are you sure you want to delete this Client?");
-                                    if (yes) {
-                                        $.ajax({
-                                            type: "DELETE",
-                                            url: uri + "/" + id,
-                                        }).done(function (response) {
-                                            $("#result").html("Client data is deleted successfully");
-                                            getallClient();
-                                        }).fail(function (jqXHR, textStatus) {
-                                            $("#result").html("An error occured when deleting the Client record.");
-                                        });
-                                    }
-                                }
-
-                                // funtion to fill the data into Update template
-                                function getClientForUpdate(id) {
-                                    $.ajax({
-                                        type: "GET",
+                                        type: "DELETE",
                                         url: uri + "/" + id,
-                                        contentType: "application/json"
                                     }).done(function (response) {
-                                        $('#Update_id').val(response.id);
-                                        $('#Update_client_Name').val(response.client_Name);
-                                        $('#Update_contact').val(response.contact);
-                                        $('#Update_service').val(response.service);
-                                        $('#Update_arrived_Date').val(response.arrived_Date);
-
-
-                                    });
-                                }
-
-                                // function to Update data of the Client
-                                function UpdateClient() {
-                                    var _client_Name = $('#Update_client_Name').val();
-                                    var _contact = $('#Update_contact').val();
-                                    var _service = $('#Update_service').val();
-                                    var _arrived_Date = $('#Update_arrived_Date').val();
-
-                                    var ClientUpdate = {
-                                        id: parseInt($('#Update_id').val()),
-                                        client_Name: _client_Name,
-                                        contact: _contact,
-                                        service: _service,
-                                        arrived_Date: _arrived_Date
-
-                                    };
-                                    $.ajax({
-                                        type: "PUT",
-                                        url: uri + "/" + $('#Update_id').val(),
-                                        data: JSON.stringify(ClientUpdate),
-                                        contentType: "application/json; charset=utf-8"
-                                    }).done(function (response) {
-                                        $("#Update_result").html("Record is Updated Successfully");
+                                        $("#result").html("Client data is deleted successfully");
                                         getallClient();
                                     }).fail(function (jqXHR, textStatus) {
-                                        $("#Update_result").html("An error occured when updating Client record.");
+                                        $("#result").html("An error occured when deleting the Client record.");
                                     });
                                 }
-                            </script>
+                            }
 
-                            <!-- below mentioned code will create the template on the web page to display all books -->
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <script id="ClientTemplate" class="table table-bordered table-condensed table-striped">
-                                        <table>
-                                            <thead>
-                                                <table style="width:100%">
-                                                    <tr>
-                                                        <td width="100px">  ${client_Name} </td>
-                                                        <td width="100px">  ${contact} </td>
-                                                        <td width="100px">  ${service} </td>
-                                                        <td width="100px">  ${arrived_Date} </td>
+                            // funtion to fill the data into Update template
+                            function getClientForUpdate(id) {
+                                $.ajax({
+                                    type: "GET",
+                                    url: uri + "/" + id,
+                                    contentType: "application/json"
+                                }).done(function (response) {
+                                    $('#Update_id').val(response.id);
+                                    $('#Update_client_Name').val(response.client_Name);
+                                    $('#Update_contact').val(response.contact);
+                                    $('#Update_service').val(response.service);
+                                    $('#Update_arrived_Date').val(response.arrived_Date);
 
-                                                    </tr>
 
-                                                </table>
-                                            </thead>
-                                            <div style="text-align:right; width:100%; padding:0;">
-                                                <button class="btn btn-light" onclick="getClientForUpdate('${id}')" data-toggle="modal" data-target="#UpdateClients" >Renew</button>
-                                                <a href="#" class="btn btn-dark" onclick="remove('${id}')" >Cancel</a>
-                                            </div>
-                                        </table>
-                                    </script>
-                                </div>
+                                });
+                            }
+
+                            // function to Update data of the Client
+                            function UpdateClient() {
+                                var _client_Name = $('#Update_client_Name').val();
+                                var _contact = $('#Update_contact').val();
+                                var _service = $('#Update_service').val();
+                                var _arrived_Date = $('#Update_arrived_Date').val();
+
+                                var ClientUpdate = {
+                                    id: parseInt($('#Update_id').val()),
+                                    client_Name: _client_Name,
+                                    contact: _contact,
+                                    service: _service,
+                                    arrived_Date: _arrived_Date
+
+                                };
+                                $.ajax({
+                                    type: "PUT",
+                                    url: uri + "/" + $('#Update_id').val(),
+                                    data: JSON.stringify(ClientUpdate),
+                                    contentType: "application/json; charset=utf-8"
+                                }).done(function (response) {
+                                    $("#Update_result").html("Record is Updated Successfully");
+                                    getallClient();
+                                }).fail(function (jqXHR, textStatus) {
+                                    $("#Update_result").html("An error occured when updating Client record.");
+                                });
+                            }
+                        </script>
+
+                        <!-- below mentioned code will create the template on the web page to display all books -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <script id="ClientTemplate" class="table table-bordered table-condensed table-striped">
+                                    <table>
+                                        <thead>
+                                            <table style="width:100%">
+                                                <tr>
+                                                    <td width="100px">  ${client_Name} </td>
+                                                    <td width="100px">  ${contact} </td>
+                                                    <td width="100px">  ${service} </td>
+                                                    <td width="100px">  ${arrived_Date} </td>
+
+                                                </tr>
+
+                                            </table>
+                                        </thead>
+                                        <div style="text-align:right; width:100%; padding:0;">
+                                          
+                                            <button class="btn btn-light" onclick="getClientForUpdate('${id}')" data-toggle="modal" data-target="#UpdateClients" >Renew</button>
+                                            <a href="#" class="btn btn-dark" onclick="remove('${id}')" >Cancel</a>
+                                        </div>
+                                    </table>
+                                </script>
                             </div>
+                        </div>
 </body>
 </html>

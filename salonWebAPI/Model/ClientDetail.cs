@@ -9,12 +9,12 @@ namespace salonWebAPI.Model
     public class ClientDetail
     {
         [Key]
-        public int Id { get; set; }
-        public string client_Name { get; set; }
-        public string contact { get; set; }
-        public string service { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime arrived_Date { get; set; }
+        public int Id { get; set; } //created class for add client deatail
+        public string client_Name { get; set; }// client name
+        public string contact { get; set; }// client contact detail
+        public string service { get; set; }//service name that client want to take
+        [DataType(DataType.Date)]// this code will only show date rather than time
+        public DateTime arrived_Date { get; set; }// appointment date
 
     }
 }
